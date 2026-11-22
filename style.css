@@ -1,0 +1,136 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, Arial, sans-serif;
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+.pricing {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 48px 20px;
+  text-align: center;
+}
+
+.toggle {
+  display: inline-flex;
+  background: #e2e8f0;
+  border-radius: 999px;
+  padding: 4px;
+  margin: 16px 0 40px;
+}
+
+.toggle button {
+  border: none;
+  background: transparent;
+  padding: 10px 24px;
+  border-radius: 999px;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #334155;
+}
+
+.toggle button.active {
+  background: #1d4ed8;
+  color: #ffffff;
+}
+
+.toggle button:focus-visible,
+.cta:focus-visible {
+  outline: 3px solid #f59e0b;
+  outline-offset: 2px;
+}
+
+.save {
+  background: #047857;
+  color: #ffffff;
+  font-size: .7rem;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 999px;
+  margin-left: 6px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  align-items: center;
+}
+
+.card {
+  position: relative;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 40px 28px 32px;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, .08);
+  border: 2px solid transparent;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.card.popular {
+  border-color: #1d4ed8;
+  transform: scale(1.05);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(15, 23, 42, .15);
+}
+
+.card.popular:hover {
+  transform: scale(1.05) translateY(-6px);
+}
+
+.amount { font-size: 2.2rem; font-weight: 700; margin: 12px 0 4px; }
+.unit { font-size: 1rem; font-weight: 400; color: #475569; }
+
+.billing-note { color: #475569; font-size: .9rem; margin: 0; min-height: 1.2em; }
+
+.card ul {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0;
+  text-align: left;
+}
+
+.card li { padding: 8px 0; border-bottom: 1px solid #e2e8f0; }
+
+.ribbon {
+  position: absolute;
+  top: 16px;
+  right: -8px;
+  background: #1d4ed8;
+  color: #ffffff;
+  font-size: .8rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 6px;
+}
+
+.ribbon.best { background: #047857; }
+
+.cta {
+  display: block;
+  background: #1d4ed8;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 14px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card { transition: none; }
+  .card:hover { transform: none; }
+  .card.popular:hover { transform: scale(1.05); }
+}
+
+@media (max-width: 800px) {
+  .cards { grid-template-columns: 1fr; }
+  .card.popular { order: -1; }
+  .card.popular,
+  .card.popular:hover { transform: none; }
+}

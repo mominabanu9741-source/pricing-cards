@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pricing</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section class="pricing">
+    <h2>Choose your plan</h2>
+
+    <div class="toggle" role="group" aria-label="Billing period">
+      <button id="monthly" class="active" aria-pressed="true">Monthly</button>
+      <button id="yearly" aria-pressed="false">Yearly <span class="save">Save 20%</span></button>
+    </div>
+
+    <div class="cards" aria-live="polite">
+      <article class="card">
+        <h3>Starter</h3>
+        <p class="amount">₹<span class="price" data-monthly="299" data-yearly="2870">299</span>
+          <span class="unit">per month</span></p>
+        <p class="billing-note"></p>
+        <ul>
+          <li>1 project</li>
+          <li>Basic analytics</li>
+          <li>Email support</li>
+          <li>1 GB storage</li>
+          <li>Community access</li>
+        </ul>
+        <a class="cta" href="#">Get Starter</a>
+      </article>
+
+      <article class="card popular">
+        <span class="ribbon">Popular</span>
+        <h3>Pro</h3>
+        <p class="amount">₹<span class="price" data-monthly="599" data-yearly="5750">599</span>
+          <span class="unit">per month</span></p>
+        <p class="billing-note"></p>
+        <ul>
+          <li>10 projects</li>
+          <li>Advanced analytics</li>
+          <li>Priority support</li>
+          <li>20 GB storage</li>
+          <li>Custom domain</li>
+        </ul>
+        <a class="cta" href="#">Get Pro</a>
+      </article>
+
+      <article class="card">
+        <span class="ribbon best">Best Value</span>
+        <h3>Team</h3>
+        <p class="amount">₹<span class="price" data-monthly="999" data-yearly="9590">999</span>
+          <span class="unit">per month</span></p>
+        <p class="billing-note"></p>
+        <ul>
+          <li>Unlimited projects</li>
+          <li>Team dashboard</li>
+          <li>24/7 support</li>
+          <li>100 GB storage</li>
+          <li>Role permissions</li>
+        </ul>
+        <a class="cta" href="#">Get Team</a>
+      </article>
+    </div>
+  </section>
+  <script src="script.js"></script>
+</body>
+</html>
